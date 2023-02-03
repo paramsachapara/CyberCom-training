@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="D:/training/02022023/css/practical7.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="Success.html">
+      <fieldset class="firstFieldset">
+        <legend>Your address</legend>
+        <table>
+          <tr>
+            <td><label for="firstName">First name</label></td>
+            <td><input type="text" name="firstName" id="firstName" /></td>
+          </tr>
+          <tr>
+            <td><label for="lastName">Last name</label></td>
+            <td><input type="text" name="lastName" id="lastName" /></td>
+          </tr>
+          <tr>
+            <td><label for="street">Street</label></td>
+            <td><input type="text" name="street" id="street" /></td>
+          </tr>
+          <tr>
+            <td><label for="city">City</label></td>
+            <td><input type="text" name="city" id="city" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <!-- Additional detail fielsset -->
+      <fieldset class="secondFieldset">
+        <legend>Additional details</legend>
+        <table>
+          <tr>
+            <td><label for="biography">Biography</label></td>
+            <td>
+              <textarea
+                name="biography"
+                id="biography"
+                cols="30"
+                rows="3"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="image">image</label></td>
+            <td><input type="file" name="file" id="file" /></td>
+          </tr>
+          <tr>
+            <td><label for="ageGroup">Age group</label></td>
+            <td>
+              <select name="ageGroup" id="ageGroup">
+                <option value="0 to 9">0 to 9</option>
+                <option value="10 to 19">10 to 19</option>
+                <option value="20 to 29">20 to 29</option>
+                <option value="30 and above">30 and above</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="city">City</label></td>
+            <td><input type="text" name="city" id="city" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <!-- intrest fielsset -->
+      <fieldset class="thirdFieldset">
+        <legend>Intrest</legend>
+        <table>
+          <tr>
+            <td><label for="hobbies">Hobbies</label></td>
+            <td>
+              <textarea
+                name="hobbies"
+                id="hobbies"
+                cols="30"
+                rows="3"
+              ></textarea>
+            </td>
+          </tr>
+          <!-- <tr>
+                    <td><label for="image">image</label></td>
+                    <td><input type="file" name="file" id="file"></td>
+                </tr> -->
+          <tr>
+            <td><label for="favouritCar">Favourit Car?</label></td>
+            <td>
+              <select name="favouritCar" id="favouritCar">
+                <option value="gt500">gt 500</option>
+                <option value="700Ld">700 LD</option>
+                <option value="mcLaren">mc laren</option>
+                <option value="chiron">Chiron</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="favouritTransport">Favourit Car?</label></td>
+            <td>
+              <select name="favouritTransport" id="favouritTransport">
+                <optgroup label="Ground">
+                  <option value="train">Train</option>
+                  <option value="bus">Bus</option>
+                </optgroup>
+                <optgroup label="Water">
+                  <option value="cruise">Cruise</option>
+                  <option value="ship">Ship</option>
+                </optgroup>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <input class="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+table,td,tr{
+    border: none;
+}
+.firstFieldset,.secondFieldset,.thirdFieldset{
+    width: 600px;
+}
+.submit{
+    margin-left: 100px;
+}

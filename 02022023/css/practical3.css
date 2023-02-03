@@ -1,0 +1,9 @@
+table,th,td{
+    border: 1px solid black;
+}
+table,th{
+    border-collapse: collapse;
+}
+.innerTable,.innerRow{
+    border-collapse: separate;
+}

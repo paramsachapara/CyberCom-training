@@ -1,0 +1,29 @@
+table, th,td{
+    border: 1px solid black;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background: lightgreen;
+    border-collapse: separate;
+}
+.firstColumn{
+    background-color:lightblue;
+}
+.secondColumn{
+    background-color:white;
+}
+.thirdColumn{
+    background-color:lightcoral;
+}
+.fourthColumn{
+    background-color:lightyellow;
+}
+table{
+    margin-left: 450px;
+}
+caption{
+    text-align: left;
+    
+}

@@ -1,9 +1,12 @@
-function email(){
+function myEmail(){
     if(document.getElementById("email").value != document.getElementById("reEmail").value){
         alert("please enter same mailid");
     }
+    console.log("sdfgh");
 }
-function password(){
+
+
+function myPassword(){
     if(document.getElementById("password").value != document.getElementById("rePassword").value){
         alert("pleaseenter same passward as above");
     }
@@ -61,7 +64,5 @@ function showData(){
    document.getElementById("data9").innerHTML = city;
    document.getElementById("data10").innerHTML = state;
    document.getElementById("data11").innerHTML = zip;
-   document.getElementById("data13").innerHTML = phone;
-    
-    
+   document.getElementById("data13").innerHTML = phone;    
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="D:/cybercom training/03022023/css/healthCareForm.css" />
+    <title>Health Care Insurance</title>
+</head>
+
+<body>
+    <div class="main">
+        <h3 class="beforHeading">Information</h3>
+        <h1 class="mainHeading">
+            <b> Health Care Insurance<sup>+</sup></b>
+        </h1>
+        <p class="p1">complete all answer in capital letters</p>
+        <form name="myform" method="post" action="" onsubmit="return validateform()" >  
+        <div class="employmentStatement">
+            <fieldset>
+                <p class="p2"><b>EMPLOYEE STSTEMENT</b></p>
+                <label for="groupContractNumber">Group Contract Number</label>
+                <input type="text" name="groupContractNumber" id="groupContractNumber" />
+                <label for="certificateNumber">Certificate Number</label>
+                <input type="text" name="certificateNumber" id="certificateNumber" />
+                <br />
+                <br/>
+                <label for="lastName">Employee last name and given name</label>
+                <input type="text" name="lastName" id="lastName" />
+                <label for="dob">Date of birth(DD/MM/YYYY)</label>
+                <input type="date" name="dob" id="dob" />
+                <br />
+                <br>
+                <label for="employeeAddress">Employee Address</label>
+                <input type="text" name="employeeAddress" id="employeeAddress" />
+                <br>
+                <p class="p3">
+                    would you like your claims and payment depodited into youre account?
+                </p>
+                <br />
+                <input type="checkbox" id="confirmation" name="confirmation" value="true" />
+                <span>I have included a valid cheque</span>
+            </fieldset>
+        </div>
+        <div class="coordinateOfBenifits">
+            <fieldset>
+                <p>
+                    1.Does you're spouse and/or childers have coverage under any other
+                    medical plane or contract?
+                </p>
+                <input type="radio" onclick="radioElementOne()" id="yesOne" name="radioOne" value="yes" />
+                Yes
+                <input type="radio" onclick="radioElementOne()" id="noOne" name="radioOne" value="no" />No
+                <div id="insertionOne"></div>
+                <!-- here additional fileds will come if yes -->
+
+                <p>2.Is any expence the result of an accident?</p>
+                <input type="radio" onclick="radioElementTwo()" id="yesTwo" name="radioTwo" value="yes" />Yes
+                <input type="radio" onclick="radioElementTwo()" id="noTwo" name="radioTwo" value="no" />No
+                <div id="insertionTwo"></div>
+                <!-- here additional fileds will come if yes -->
+            </fieldset>
+        </div>
+        <h3>DRUGS, VISION CARE, PARAMEDICALSERVICES <br> AND OTHER-PATIENT INFORMATION</h3>
+        <table id="informationTable">
+            <tr>
+                <th>Patient's name</th>
+                <th>Date of birth</th>
+                <th>Relationship to plan member</th>
+                <th>Total charge</th>
+            </tr>
+            <tr>
+                <td><input type="text"  ></td>
+                <td><input type="date"  ></td>
+                <td><input type="text"  ></td>
+                <td><input type="text"  ></td>
+            </tr>
+        </table>
+        <button type="button" onclick="addRowToTable()">Add row</button>
+        <br>
+        <br>
+        <button type="submit">click to submit</button>
+        </form>
+    </div>
+    
+    <script src="D:/cybercom training/03022023/javascript/healthCareForm.js"></script>
+</body>
+
+</html>

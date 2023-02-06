@@ -1,17 +1,19 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-    
-}
 .main{
     display: flex;
-    background-color: rgb(239, 233, 233);
-    border: 1px solid black;
-   
-    
-    justify-content: center;
-
+   flex-direction: row;
+   justify-content: center;  
 }
-.firstName{
-    justify-content: center;
-} */
+.fieldset{
+    background-color: rgb(152, 208, 214);
+}
+.textUnderEmail{
+    size: 500px;
+    margin-left: 50px;
+}
+#subitButton{
+    margin-left: 150px
+}
+table,td,th{
+    border: 1px solid black;
+    
+}

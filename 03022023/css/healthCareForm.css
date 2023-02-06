@@ -1,0 +1,32 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.main{
+    width: 800px;
+    margin-left: 300px;
+}
+.mainHeading{
+    color: rgb(17, 167, 231);
+}
+.p2,.p3{
+    color: rgb(17, 167, 231);;
+}
+#insertionOne{
+    display: inline;
+}
+.informationTable,th,td{
+    border: 1px solid black;
+}
+#informationTable{
+    width: 100%;
+}
+.coordinateOfBenifits input{
+    border: none;
+    border-bottom: 1px solid black;
+}
+.employmentStatement input{
+
+    border: none;
+    border-bottom: 1px solid black;
+}

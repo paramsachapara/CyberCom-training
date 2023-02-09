@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#incorrectPassword{
+    font-size: 12px;
+    color:red;
+    display: none;
+} 
+#incorrectEmail{
+    font-size: 12px;
+    color:red;
+    display: none;
+
+}
+#imageOfCar{
+    height: 300px;
+    width: 300px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:/cybercom training/07022023/css/practice1.1.css">
+    <title>practice1.1</title>
+</head>
+<body>
+    <h1>1</h1>
+<p id="paragraph">click button bellow to cange text</p>
+<button type="button" onclick="oneChangeText()" >button </button>
+<h1>2</h1>
+<input id="addItemInput" type="text">
+<ul id="list">
+    <li class="listItem">heyy</li>
+    <li class="listItem">param</li>
+    <li class="listItem">here</li>
+</ul>
+<button type="button" onclick="removeItem()">Remove</button>
+<button type="button" onclick="addItem()">Add</button>
+
+<h1>3</h1>
+<p id="paragraphOne">paragraph one</p>
+<button onclick="clickl(this.id)" id="One">Button one</button>
+<p id="paragraphTwo">paragraph two</p>
+<button onclick="clickl(this.id)" id="Two">Button two</button>
+<p id="paragraphThree">paragraph three</p>
+<button onclick="clickl(this.id)" id="Three">Button two</button>
+
+<h1>4 : Form</h1>
+<form action="" id="form" name="formOne">
+    name: <input type="text" id="userName">
+    surname: <input type="text" name="surname" id="">
+    email: <input type="text" id="email" name="email">
+    password: <input type="text" name="password">
+    <input type="submit" value="submit " onclick=" return validateEmail(document.formOne.email);return validatePassword(document.formOne.password);">
+    <br>
+    
+    <p id="incorrectEmail">Please enter vlalid email</p>
+    <p id="incorrectPassword">A password contains at least eight characters, including at least one number and includes both lower and uppercase letters and special characters</p>
+</form>
+<script src="D:/cybercom training/07022023/javascript/practice1.1.js"></script>
+
+<h1>5</h1>
+<img id="imageOfCar" src="D:\cybercom training\07022023\images\car1.jpg" alt="img of car">
+<button type="button" name="imageChangeButton" onclick="changeImage()">click to change image</button>
+</body>
+</html>

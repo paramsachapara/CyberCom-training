@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:/cybercom training/13022023/css/practice2.2.css">
+    <title>calculator</title>
+</head>
+<body>
+    <div class="main-calculate">
+        <h2> calculator</h2>
+        <div class="container-calculator">
+            <input type="text" id="inp" value="" disabled >
+            <button value="1" onclick="math.addFun(value)">1</button>
+            <button value="2" onclick="math.addFun(value)">2</button>
+            <button value="3" onclick="math.addFun(value)">3</button>
+
+            <button value="4" onclick="math.addFun(value)">4</button>
+            <button value="5" onclick="math.addFun(value)">5</button>
+            <button value="6" onclick="math.addFun(value)">6</button>
+ 
+        
+            <button value="7" onclick="math.addFun(value)">7</button>
+            <button value="8" onclick="math.addFun(value)">8</button>
+            <button value="9" onclick="math.addFun(value)">9</button>
+            <div>&nbsp;</div>
+            <button value="1" onclick="math.addFun(value)">0</button>
+            <div>&nbsp;</div>
+            <button value="+" onclick="math.addFun(value)">+</button>
+            <button value="-" onclick="math.addFun(value)">-</button>
+            <button value="*" onclick="math.addFun(value)">*</button>
+            <button value="/" onclick="math.addFun(value)">/</button>
+            <button id="clear" onclick="math.clrFun()">clear</button>
+            <div>&nbsp;</div>
+            <button id="ans" value="" onClick="math.resFun()">=</button>
+            <div>&nbsp;</div>
+        </div>
+        
+    </div>
+    <h2>case 2 BMI</h2>
+    <div class="container-calculator">
+        <input type="text" id="height" value="" placeholder="Height (meter)" > <input type="number" id="weight" placeholder="weight (kg)"> <input type="number" id="result">
+        <div>&nbsp;</div>
+        <button id="clear" onclick="clearBMI()">clear</button>
+        <div>&nbsp;</div>
+        <button id="ans" value="" onClick="calculateBmi()">BGM</button>
+        <div>&nbsp;</div>
+    </div>
+
+    <h2>case 3</h2>
+    <div id="three">
+        <b id="input3">input:</b> <input type="text" name="" id="text">
+        <button type="button" id="button3" onclick="split()">Click me</button>
+        <div id="output3"></div>
+    </div>
+
+    <h2>case 4</h2>
+    <input type="date" id="txtDOB" class="dob" />
+    
+
+<button id="btnCalculate" onclick="fnCalculateAge();" >Calculate Age</button>
+<br>
+<div id="output4"></div> 
+<script src="D:/cybercom training/13022023/javascript/practice2.2.js"></script>   
+</body>
+</html>

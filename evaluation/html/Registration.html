@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:/cybercom training/evaluation/css/registration.css">
+    <title>Registration form</title>
+</head>
+<body>
+    <div id="main">
+    <form action=""></form>
+    <table id="registrationTable">
+        <tr><td><input type="text" id="registrationInputName" placeholder="Name"></td></tr>
+        <tr><td><span class="error" id="nameError">please enter your name</span></td></tr>
+
+        <tr><td><input type="email" id="registrationInputEmail" placeholder="Email"></td></tr>
+        <tr><td><span class="error" id="emailErrorTwo">please enter valid email</span></td></tr>
+        <tr><td><span class="error" id="emailError">please enter your email</span></td></tr>
+
+        <tr><td><input type="password" id="registrationInputPassword" placeholder="Password"></td></tr>
+        <tr><td><span >Password must have least eight characters that contain at least one lowercase letter, one uppercase letter, and one digit</span></td></tr>
+        <tr><td><span class="error" id="passwordError">please enter your password</span></td></tr>
+        <tr><td><span class="error" id="passwordErrorTwo">please enter valid passowrd</span></td></tr>
+        
+        <tr><td><input type="password" id="registrationInputComformPassword" placeholder="Re-enter your password"></td></tr>
+        <tr><td><span class="error" id="rePasswordError">please enter password again</span></td></tr>
+        <tr><td><span class="error" id="rePasswordErrorTwo">please enter password as above</span></td></tr>
+
+        <tr><td><select name="registrationInputCity" id="registrationInputCity">
+            <option value="ahmedabad">Ahmedabad</option>
+            <option value="bhavnagar">Bhavnagar</option>
+            <option value="surat">Surat</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="pune">Pune</option>
+        </select></td></tr>
+        <tr><td><select name="registrationInputState" id="registrationInputState">
+            <option value="gujarat">Gujarat</option>
+            <option value="maharashtra">Maharashtra</option>
+        </select></td></tr>
+        <tr><td><input type="checkbox" id="registrationInputCheckbox" name="registrationInputCheckbox" value="registrationInputCheckbox"> Terms & Condition</td></tr>
+        <tr><td><span class="error" id="checkboxError">please check the box</span></td></tr>
+        <tr><td><button type="button" id="Registration" onclick="registrationFormValidation()"name="Registration">Registration</button></td></tr>
+    </table>
+</form>
+</div>
+<script src="D:/cybercom training/evaluation/javascript/registration.js"></script>
+</body>
+</html>

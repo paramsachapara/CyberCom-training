@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="D:/cybercom training/evaluation/css/user.css">
+    <script type="text/JavaScript" src="https://MomentJS.com/downloads/moment-with-locales.js"></script>
+    <title>Document</title>
+</head>
+<body >
+
+    
+<div class="sidenav">
+    <div id="welcomeMessage">
+    hello,<span id="userNameInDashbord">user name</span>
+    </div>
+    <a href="#about">Dashbord</a>
+    <a href="D:/cybercom training/evaluation/html/user.html" onclick="goToUserPage()">Users</a>
+    <a href="D:/cybercom training/evaluation/html/session.html">login session</a>
+    <a href="D:/cybercom training/evaluation/html/login.html" onclick="logoutfunction()">logout</a>
+  </div>
+  
+  <div class="main">
+    <div id="inputInUserForm">
+        <p>add User</p>
+        <table>
+            <tr>
+                <td><input class="userFormInput" type="text" id="userFormInputName" placeholder="NAME"></td>
+                <td><input class="userFormInput" type="text" id="userFormInputEmail" placeholder="EMAIL"></td>
+                <td><input class="userFormInput" type="text" id="userFormInputPassword" placeholder="PASSWORD"></td>
+                <td><input class="userFormInput" type="date" id="userFormInputBirthdate" placeholder="BIRTHDATE"></td> 
+            </tr>
+            <tr>
+                <td ><span id="userPageNameError">Enter valid data</span></td>
+                <td ><span id="userPageEmailError">Enter valid data</span></td>
+                <td ><span id="userPagePasswordError">Enter valid data</span></td>
+                <td ><span id="userPageDateError">Enter valid data</span></td>
+            </tr>
+            <tr>
+                <td ><span id="userPageNameErrorTwo">Enter name</span></td>
+                <td ><span id="userPageEmailErrorTwo">Enter email</span></td>
+                <td ><span id="userPagePasswordErrorTwo">Enter password</span></td>
+                <td ><span id="userPageDateErrorTwo">Enter date</span></td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+                <td><button class="userFormInput" type="button" id="userFormAddUserButton" onclick="validateAndAdd()">add user</button></td>
+            </tr>
+        </table>
+       
+
+    </div>
+    <p>User list</p>
+    <div id="">
+        <table id="userDataTable">
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Age</th>
+              <th>Birthdate</th>
+              <th>Actions</th>
+            </tr>
+          
+          </table>
+    </div>
+    </div>
+    
+  </div>
+     
+    
+ <script src="D:/cybercom training/evaluation/javascript/user.js"></script>
+</body>
+</html>

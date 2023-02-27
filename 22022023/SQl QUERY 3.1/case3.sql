@@ -45,4 +45,11 @@ VALUES
 
 select * from sales;
 
-
+SELECT 
+    SUM(total_price) AS total_sales, MONTH(date)
+FROM
+    Sales
+WHERE
+    YEAR(date) = 2022
+GROUP BY MONTH(date)
+ORDER BY MONTH(date);

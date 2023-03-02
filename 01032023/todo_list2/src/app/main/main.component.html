@@ -1,0 +1,14 @@
+<input type="text" #task>
+<select #priority name="priority" >
+    
+    <option value="high">high</option>
+    <option value="medium">medium</option>
+    <option value="low">low</option>
+    
+  </select>
+<button (click)="add_Task(task.value,priority.value)">submit</button>
+<br><br><br>
+
+<ul class="task">
+    <li   *ngFor="let item of list" [ngClass]="item.priority_value" >{{item?.task_detail }} <button (click)="remove(item.id)">delete</button>   </li>
+</ul>

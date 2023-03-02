@@ -1,0 +1,12 @@
+.task{
+    margin-left: 20px;
+}
+.high{
+    background-color: red;
+}
+.medium{
+    background-color: orange;
+}
+.low{
+    background-color: green;
+}

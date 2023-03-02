@@ -5,3 +5,7 @@
 <p *ngFor="let items of number">{{items}}</p>
 
 <li *ngFor="let items of users">age of {{items.name}} is {{items.age}}</li>
+<input  (keydown.shift.p.l)="keydown()"> {{message}}
+
+<h3>two way binding</h3>
+<input [(ngModel)]="name" type="text">{{name}}

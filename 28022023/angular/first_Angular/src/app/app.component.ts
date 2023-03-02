@@ -13,5 +13,14 @@ export class AppComponent {
     {name:"yug",age:25},
     {name:"rutvik",age:48},
     {name:"tejas", age:59}
-  ]
+  ];
+  message = "";
+
+
+  keydown(){
+    this.message="hello, param here";
+  }
+
+  name="";
 }
+

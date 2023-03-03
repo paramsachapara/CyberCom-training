@@ -1,0 +1,13 @@
+.nav_button{
+    margin-left: 10px;
+
+    padding-bottom: 20px;
+    border: 1px solid black;
+    background-color: lightgreen;
+    text-decoration: none;
+}
+.navbar{
+    height: 40px;
+    width: 100%;
+    background-color: bisque;
+}

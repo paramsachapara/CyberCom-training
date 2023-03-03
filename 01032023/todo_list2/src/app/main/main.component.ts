@@ -21,4 +21,5 @@ export class MainComponent {
   remove(item:number){
     this.list.splice(item,1)
   };
+  input: string="";
 }

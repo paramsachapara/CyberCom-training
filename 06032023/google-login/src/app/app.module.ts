@@ -8,10 +8,12 @@ import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent, 
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,11 +29,11 @@ import { AppComponent } from './app.component';
         {
           id: GoogleLoginProvider.PROVIDER_ID,
           provider: new GoogleLoginProvider(
-            '122884009518-vhgu2mhkpvjos8fb16u22rr701j4qgru.apps.googleusercontent.com'
+            '312855324968-6ue58121v579c2g4vnpl03sd1052uipg.apps.googleusercontent.com'
           )
         },
       ],
-      onError: (err) => {
+      onError: (err: any) => {
         console.error(err);
       }
     } as SocialAuthServiceConfig,

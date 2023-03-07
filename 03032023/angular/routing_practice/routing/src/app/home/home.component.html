@@ -1,1 +1,8 @@
 <p>home works!</p>
+<input (keyup)="changeImage($event)" [value]="imgURL"><br>
+<img [ngClass]="'home_image'" [src]="imgURL" >
+<h3>this image is from other component using decorators (parent to child) </h3>
+
+<app-products [productURL]="imgURL">
+    <p>hello</p>
+</app-products>

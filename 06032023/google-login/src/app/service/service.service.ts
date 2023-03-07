@@ -6,8 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ServiceService {
 
-  constructor(private _http:HttpClient) { }
+  constructor(private http:HttpClient) { }
+  responseData:any;
   getData(){
-    return this._http.get('https://ipinfo.io/161.185.160.93/geo')
+    let url = 'https://ipinfo.io/161.185.160.93/geo';
+    return this.http.get(url);
   }
 }

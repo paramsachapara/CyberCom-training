@@ -1,6 +1,5 @@
 import { SocialAuthService } from '@abacritt/angularx-social-login';
 import { Component } from '@angular/core';
-import { ApiserviceService } from './apiservice.Service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +7,7 @@ import { ApiserviceService } from './apiservice.Service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'apiData';
+  title = 'practical-test';
   user:any;
   loggedIn:any;
   location:any;
@@ -26,6 +25,4 @@ export class AppComponent {
     this.location=e;
     console.log(this.location);
   }
-  newdata:any;
-  
 }

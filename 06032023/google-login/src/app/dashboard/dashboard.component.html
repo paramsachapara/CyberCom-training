@@ -1,0 +1,20 @@
+<label for="inpTxt">Enter ip Address</label>
+<input type="text" name="inpTxt" #inpTxt>
+<button (click)="ipToLocation(inpTxt.value)">search</button>
+<h2>Collect Api data</h2>
+{{responseData}}
+
+<table>
+    <tr>
+        <th>ip</th>
+        <th>country</th>
+        <th>region</th>
+        <th>lat/lon</th>
+    </tr>
+    <tr>
+        <td>{{newData.ip}}</td>
+        <td>{{newData.country}}</td>
+        <td>{{newData.region}}</td>
+        <td>{{newData.loc}}</td>
+    </tr>
+</table>

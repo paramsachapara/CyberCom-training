@@ -1,55 +1,56 @@
-<section class="vh-100 gradient-custom">
-    <div class="container py-10 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-          <div class="card bg-dark text-white" style="border-radius: 1rem;">
-            <div class="card-body p-3 text-center">
-  
-              <form class="mb-md-4 mt-md-3 pb-0" [formGroup]="registration" (ngSubmit)="doRegistration()">
-  
-                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-                <p class="text-white-50 mb-5">Please enter your login and password!</p>
-  
-                <div class="form-outline form-white mb-4" >
-                    <input
-                    type="email"
-                    [class.is-invalid]="
-                      registration.invalid && registration.touched
-                    "
-                    class="form-control"
-                    name="email"
-                    id="email"
-                    formControlName="email"
-                  /><br>
-                  <label class="form-label" for="typeEmailX">Email</label>
-                </div>
-  
-                <div class="form-outline form-white mb-4">
-                  <input type="password" id="typePasswordX" class="form-control form-control-lg" formGroupName="password" />
-                  <label class="form-label" for="typePasswordX">Password</label>
-                </div>
 
-                <div class="form-outline form-white mb-4">
-                    <input type="password" id="RePassword" class="form-control form-control-lg"formGroupName="re_password" />
-                    <label class="form-label" for="RePassword">Re-Password</label>
-                  </div>
-  
-                <p class="small mb-5 pb-lg-2"><a class="text-white-50" href="#!">Forgot password?</a></p>
-  
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-  
-                
-  
-                </form>
-  
-              <div>
-                <p class="mb-0">Don't have an account? <a href="#!" class="text-white-50 fw-bold">Sign Up</a>
-                </p>
-              </div>
-  
-            </div>
-          </div>
+     <form class="mb-md-4 mt-md-3 pb-0" [formGroup]="registration" (ngSubmit)="doRegistration()">
+
+       <div class="form-outline form-white mb-1 form-group" >
+         <label class="form-label" for="typeEmailX">Email</label> 
+           <input
+                type="email"
+                [class.is-invalid]="email.invalid && email.touched"
+                class="form-control"    
+                name="email"
+                id="email"
+                formControlName="email"
+         /><br>
+         <!-- <div *ngIf="email.invalid && email.touched">
+          <div *ngIf="email.errors?.['required']">please enter email</div>
+          <div *ngIf="email.errors?.['minlength']">email size should be greater than 3</div>
+          <div *ngIf="email.errors?.['forbidden']">email not allowed</div>
+         </div> -->
+         
         </div>
-      </div>
-    </div>
-  </section>
+        
+        <div class="form-outline form-white mb-1 form-group">
+         <label class="form-label" for="typePasswordX">Password</label>
+         <input type="password" id="typePasswordX" class="form-control form-control-lg" formControlName="password" />
+       </div>
+
+       <div class="form-outline form-white mb-1 form-group">
+         <label class="form-label" for="RePassword">Re-Password</label>
+           <input [class.is-invalid]="registration.errors?.['mismatch']" type="password" id="RePassword" class="form-control form-control-lg" formControlName="re_password" />
+
+           <!-- <div *ngIf="registration.error?.mismatch" class="text-danger is-invalid">
+              password must be same
+           </div> -->
+
+         </div>
+
+         <div formGroupName="address">
+          <div class="form-outline form-dark mb-1 form-group">
+            <label  for="city">City</label>
+            <input type="text" id="city" class="form-control form-control-lg" formControlName="city" />
+          </div>
+          <div class="form-outline form-dark mb-1 form-group">
+            <label  for="state">State</label>
+            <input type="text" id="state" class="form-control form-control-lg" formControlName="state" />
+          </div>
+          <div class="form-outline form-dark mb-1 form-group">
+            <label  for="postal_code">postal code</label>
+            <input type="text" id="postal_code" class="form-control form-control-lg" formControlName="postal_code" />
+          </div>
+         </div>
+
+       <button class="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
+       </form>
+       {{registration.value | json}}
+  
+ 

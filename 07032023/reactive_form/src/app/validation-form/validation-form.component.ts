@@ -11,13 +11,13 @@ import { passwordValidator } from '../shared/password-validator';
 export class ValidationFormComponent {
   get email(){
     return this.registration.get['email'];
-    
+
   }
 
   constructor(private fb:FormBuilder){}
   registration : any= this.fb.group({
-    email: ['',[Validators.required]],
-    password: [''],
+    email: ['',[Validators.required,Validators.email]],
+    password: ['',[Validators.required]],
     re_password: [''],
     address : this.fb.group({
       city: [''],
@@ -25,7 +25,7 @@ export class ValidationFormComponent {
       postal_code: ['']
     })
   });
-  
+
   //  registration : any = new FormGroup({
     //   email: new FormControl('',Validators.required),
   //   password: new FormControl(''),
@@ -34,14 +34,14 @@ export class ValidationFormComponent {
     //     city: new FormControl(''),
     //     state: new FormControl(''),
     //     postal_code: new FormControl(''),
-    
-    
+
+
     //   })
-    
+
     //  });
-    
+
     doRegistration(){
-    // console.log(this.registration.controls); 
+    // console.log(this.registration.controls);
     let password = this.registration.value.password;
     let repassword = this.registration.value.re_password;
     let email_touch=this.registration.touched;

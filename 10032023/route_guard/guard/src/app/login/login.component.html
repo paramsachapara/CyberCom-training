@@ -1,0 +1,22 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../assets/lofin.png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- Login Form -->
+      <form [formGroup]="login" class="form" (ngSubmit)="test()">
+        <input type="text" id="email" class="fadeIn second form-control " name="email" placeholder="email" [class.is-invalid]="email.invalid && email.touched" formControlName="email">
+        <input type="text" id="password" class="fadeIn third form-control" name="login" placeholder="password" [class.is-invalid]="password.invalid && password.touched" formControlName="password">
+        <input type="submit" class="fadeIn fourth" value="LogIn "  >
+      </form>
+
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+
+  </div>

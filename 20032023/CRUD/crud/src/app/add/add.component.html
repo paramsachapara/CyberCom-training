@@ -1,0 +1,11 @@
+<form [formGroup]="userForm">
+  <label for="username">UserName</label>
+  <input type="text" id="username"  formControlName="userName">
+
+  <label for="email">Email</label>
+  <input type="text" id="email"  formControlName="email">
+
+<button [disabled]="userForm.invalid" *ngIf="!id" type="button" (click)="submit()">submit</button>
+<button [disabled]="userForm.invalid" *ngIf="id" type="button" (click)="submit()">update</button>
+
+</form>

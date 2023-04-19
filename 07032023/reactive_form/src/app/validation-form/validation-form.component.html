@@ -2,11 +2,11 @@
      <form class="mb-md-4 mt-md-3 pb-0" [formGroup]="registration" (ngSubmit)="doRegistration()">
 
        <div class="form-outline form-white mb-1 form-group" >
-         <label class="form-label" for="typeEmailX">Email</label> 
+         <label class="form-label" for="typeEmailX">Email</label>
            <input
                 type="email"
-                [class.is-invalid]="email.invalid && email.touched"
-                class="form-control"    
+                [class.is-invalid]="registration.get['email'].invalid && registration.grt['email'].touched"
+                class="form-control"
                 name="email"
                 id="email"
                 formControlName="email"
@@ -16,9 +16,9 @@
           <div *ngIf="email.errors?.['minlength']">email size should be greater than 3</div>
           <div *ngIf="email.errors?.['forbidden']">email not allowed</div>
          </div> -->
-         
+
         </div>
-        
+
         <div class="form-outline form-white mb-1 form-group">
          <label class="form-label" for="typePasswordX">Password</label>
          <input type="password" id="typePasswordX" class="form-control form-control-lg" formControlName="password" />
@@ -52,5 +52,4 @@
        <button class="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
        </form>
        {{registration.value | json}}
-  
- 
+

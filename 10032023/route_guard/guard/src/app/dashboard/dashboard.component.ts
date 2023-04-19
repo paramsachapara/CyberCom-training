@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  onLogout() : any{
+    localStorage.removeItem("token")
+  }
 }

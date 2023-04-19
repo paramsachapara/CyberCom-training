@@ -1,0 +1,19 @@
+ 
+    <button (click)="onToggle()">Toggle</button>
+    <ng-container *ngIf="isShow">
+        <ng-container  *ngFor="let item of products">
+            <app-product-item  [productItem]="item" (myEventEmmiter)="onEmmit($event)"></app-product-item>
+            <br/>
+        </ng-container>
+    </ng-container>
+<!-- <app-product-item  [productItem]="productObject"></app-product-item> -->
+
+<!-- <p [title]="hoverText" (click)="onPClick()">This is p tag</p> -->
+
+<ul>
+    <li *ngFor="let num of numberList">{{num | custom : 'v'}}</li>
+</ul>
+
+<input type="text" [(ngModel)]="userName">
+{{userName}}
+<button type="button" (click)="onSave()">Save</button>

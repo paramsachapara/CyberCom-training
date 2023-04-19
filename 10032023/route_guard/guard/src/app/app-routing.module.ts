@@ -4,12 +4,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuard } from './auth.guard';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
     path:"login",
     component:LoginComponent,
-    canActivate:[AuthGuard]
+
   },
   {
     path:"home",
@@ -19,6 +20,11 @@ const routes: Routes = [
     path:"",
     redirectTo:"home",
     pathMatch:'full'
+  },
+  {
+    path:"dashboard",
+    component:DashboardComponent,
+    canActivate :  [AuthGuard]
   },
 
   {

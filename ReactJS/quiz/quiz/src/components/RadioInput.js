@@ -11,7 +11,6 @@ function RadioInput(props) {
         value={value}
         checked={checked}
         onChange={onChange}
-        style={{}}
       />
       <label style={{ border: "1px solid black", width: "100px" }} htmlFor={id}>
         {value}

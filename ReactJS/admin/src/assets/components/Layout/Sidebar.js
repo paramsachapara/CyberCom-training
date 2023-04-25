@@ -16,13 +16,14 @@ import MailIcon from "@mui/icons-material/Mail";
 import Navbar from "../../components/Layout/Navbar";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 
 export default function ClippedDrawer() {
   const theme = useTheme();
   const isMobileOrTablet = useMediaQuery(theme.breakpoints.down("sm"));
-
+  const navigate = useNavigate();
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -38,36 +39,37 @@ export default function ClippedDrawer() {
               boxSizing: "border-box",
             },
           }}
+
+          // style={{
+          //   zIndex : 900;
+          // }}
         >
           <Toolbar />
           <Box sx={{ overflow: "auto" }}>
             <List>
-              {["Inbox", "Starred", "Send email", "Drafts"].map(
-                (text, index) => (
-                  <ListItem key={text} disablePadding>
-                    <ListItemButton>
-                      <ListItemIcon>
-                        {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                      </ListItemIcon>
-                      <ListItemText primary={text} />
-                    </ListItemButton>
-                  </ListItem>
-                )
-              )}
-            </List>
-            <Divider />
-            <List>
-              {["All mail", "Trash", "Spam"].map((text, index) => (
+              {[
+                "ADD PRODUCT",
+                "MANAGE ORDERS",
+                "SWND MAIL",
+                "ADD CATEGORY",
+                "SIGNUP",
+              ].map((text, index) => (
                 <ListItem key={text} disablePadding>
                   <ListItemButton>
                     <ListItemIcon>
                       {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
                     </ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemText
+                      primary={text}
+                      onClick={() => {
+                        navigate("/signup");
+                      }}
+                    />
                   </ListItemButton>
                 </ListItem>
               ))}
             </List>
+            <Divider />
           </Box>
         </Drawer>
       )}

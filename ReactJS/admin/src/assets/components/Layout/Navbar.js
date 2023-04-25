@@ -12,13 +12,28 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Drawer from "@mui/material/Drawer";
+import { useState } from "react";
+import InboxIcon from "@mui/icons-material/Inbox";
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+} from "@mui/material";
+import MailIcon from "@mui/icons-material/Mail";
 
 const pages = ["Add prouct", "Dashboard", "Orderlist"];
-const settings = ["Profile", "Add prouct", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Logout"];
 
-function ResponsiveAppBar() {
+function Navbar() {
+  const drawerWidth = 240;
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [openDrawer, setOpenDrawer] = useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,8 +51,6 @@ function ResponsiveAppBar() {
   };
 
   return (
-    // <AppBar
-
     <AppBar
       position="fixed"
       color="success"
@@ -63,16 +76,17 @@ function ResponsiveAppBar() {
           GROCERY APP
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-          <IconButton
-            size="large"
-            aria-label="account of current user"
-            aria-controls="menu-appbar"
-            aria-haspopup="true"
-            onClick={handleOpenNavMenu}
-            color="inherit"
+          <Button
+            onClick={() => setOpenDrawer(true)}
+            sx={{
+              display: { xs: "block", md: "none" },
+              color: "white",
+              ml: "auto",
+            }}
           >
             <MenuIcon />
-          </IconButton>
+          </Button>
+
           <Menu
             id="menu-appbar"
             anchorEl={anchorElNav}
@@ -98,6 +112,8 @@ function ResponsiveAppBar() {
             ))}
           </Menu>
         </Box>
+
+        {/* ----- */}
         <ShoppingCartIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
         <Typography
           variant="h5"
@@ -119,13 +135,13 @@ function ResponsiveAppBar() {
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
           {pages.map((page) => (
-            <Button
+            <IconButton
               key={page}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               {page}
-            </Button>
+            </IconButton>
           ))}
         </Box>
 
@@ -158,8 +174,36 @@ function ResponsiveAppBar() {
             ))}
           </Menu>
         </Box>
+        <Drawer
+          anchor="left"
+          open={openDrawer}
+          onClose={() => setOpenDrawer(false)}
+          sx={{ display: { xs: "block", md: "none" } }}
+        >
+          <Box sx={{ overflow: "auto" }}>
+            <List>
+              {[
+                "ADD PRODUCT",
+                "MANAGE ORDERS",
+                "SWND MAIL",
+                "ADD CATEGORY",
+                "SIGNUP",
+              ].map((text, index) => (
+                <ListItem key={text} disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </List>
+            <Divider />
+          </Box>
+        </Drawer>
       </Toolbar>
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;
